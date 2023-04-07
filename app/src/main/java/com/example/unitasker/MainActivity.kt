@@ -1,13 +1,10 @@
 package com.example.unitasker
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
-import android.view.View
 import android.widget.FrameLayout
-import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
@@ -34,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         return true
     }
 
-    private fun changeView(fragment: Fragment) {
+    fun changeView(fragment: Fragment) {
         val manager = supportFragmentManager
         val transition = manager.beginTransaction()
         transition.replace(R.id.main_layout, fragment)
