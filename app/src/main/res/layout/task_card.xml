@@ -1,0 +1,78 @@
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    card_view:contentPadding="8dp"
+    card_view:cardUseCompatPadding="false"
+    android:layout_height="match_parent"
+    android:outlineProvider="none"
+    card_view:cardBackgroundColor="#FED9D9"
+    card_view:cardElevation="0dp"
+    card_view:cardMaxElevation="0dp"
+    >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        style="@style/heading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Machine learning methods research" />
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        style="@style/label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Machine learning"
+                        android:textColor="#FE0A0A" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_more"
+                    card_view:tint="@color/secondary" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="35dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="4dp"
+                    android:layout_weight="1"
+                    card_view:srcCompat="@drawable/time"
+                    card_view:tint="#FE0A0A" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    style="@style/label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="03:00 PM - 05:00 PM" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
