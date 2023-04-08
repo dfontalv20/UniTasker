@@ -16,4 +16,16 @@
     <style name="Theme.UniTasker.TasksCalendar.WeekDayText" parent="@style/label">
         <item name="android:textSize">15dp</item>
     </style>
+
+    <style name="Theme.UniTasker.Tag" parent="Widget.MaterialComponents.Button">
+        <item name="android:textSize">10dp</item>
+        <item name="cornerRadius">10dp</item>
+        <item name="android:textColor">@color/light</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textAppearance">@style/label</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:paddingHorizontal">32dp</item>
+    </style>
 </resources>
