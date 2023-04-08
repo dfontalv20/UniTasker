@@ -54,30 +54,13 @@
             android:layout_marginBottom="8dp"
             android:text="Subject Color" />
 
-        <LinearLayout
+        <Button
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:layout_marginBottom="30dp"
-            android:orientation="horizontal">
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="33dp"
-                android:layout_weight="1"
-                android:backgroundTint="@color/orange"
-                android:paddingTop="0dp"
-                app:cornerRadius="10dp" />
-
-            <Button
-                android:id="@+id/button10"
-                android:layout_width="40dp"
-                android:layout_height="33dp"
-                android:layout_marginStart="16dp"
-                android:backgroundTint="@color/gray"
-                android:paddingTop="0dp"
-                android:text="+" />
-
-        </LinearLayout>
+            android:layout_height="28dp"
+            app:cornerRadius="10dp"
+            android:gravity="center_horizontal|top"
+            android:backgroundTint="@color/orange" />
 
         <Button
             android:id="@+id/button12"
