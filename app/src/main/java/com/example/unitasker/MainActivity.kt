@@ -17,6 +17,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.main)
         frameLayout = findViewById(R.id.main_layout)
         navbar = findViewById(R.id.navbar)
+        changeView(CalendarFragment())
+        navbar?.selectedItemId = R.id.calendar
         navbar?.setOnItemSelectedListener { item ->
             handleNavbarItemSelection(item)
         }
