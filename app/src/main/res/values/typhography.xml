@@ -22,6 +22,7 @@
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/secondary</item>
         <item name="android:fontFamily">@font/comfortaa_semibold</item>
-        <item name="android:textSize">10sp</item>
+        <item name="android:textSize">10dp</item>
+        <item name="android:lineSpacingMultiplier">0</item>
     </style>
 </resources>

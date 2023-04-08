@@ -2,7 +2,13 @@
     <style name="Theme.UniTasker" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="colorPrimary">@color/primary</item>
         <item name="colorSecondary">@color/secondary</item>
-        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <item name="android:statusBarColor">@color/primary</item>
+        <item name="fontFamily">@font/comfortaa</item>
+        <item name="android:buttonStyle">@style/Theme.UniTasker.Button</item>
+        <item name="buttonStyle">@style/Theme.UniTasker.Button</item>
+        <item name="materialButtonStyle">@style/Theme.UniTasker.Button</item>
+        <item name="editTextStyle">@style/Theme.UniTasker.EditText</item>
+        <item name="android:editTextStyle">@style/Theme.UniTasker.EditText</item>
     </style>
     <style name="Theme.TasksCalendar" parent="Theme.MaterialComponents.Light">
         <item name="colorSecondary">@color/primary</item>
@@ -15,5 +21,46 @@
     </style>
     <style name="Theme.UniTasker.TasksCalendar.WeekDayText" parent="@style/label">
         <item name="android:textSize">15dp</item>
+    </style>
+
+    <style name="Theme.UniTasker.Tag" parent="Widget.MaterialComponents.Button">
+        <item name="android:textSize">10dp</item>
+        <item name="cornerRadius">10dp</item>
+        <item name="android:textColor">@color/light</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textAppearance">@style/label</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:paddingHorizontal">32dp</item>
+    </style>
+
+    <style name="Theme.UniTasker.EditText" parent="Widget.AppCompat.EditText">
+        <item name="android:background">@drawable/rounded_edittext_background</item>
+        <item name="android:backgroundTint">@color/primary</item>
+        <item name="android:backgroundTintMode">add</item>
+        <item name="android:paddingHorizontal">10dp</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="Theme.UniTasker.Button" parent="Widget.Material3.Button.UnelevatedButton">
+        <item name="android:textSize">12dp</item>
+        <item name="android:fontWeight">700</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:elevation">0dp</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+
+    <style name="Theme.UniTasker.TextButton" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textSize">10dp</item>
+        <item name="android:textColor">@color/secondary</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textAppearance">@style/label</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:padding">0dp</item>
     </style>
 </resources>

@@ -9,15 +9,24 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1611938e-fbfc-4ff0-a4ae-d9b4eae7d8be" name="Changes" comment="Initial commit">
+    <list default="true" id="1611938e-fbfc-4ff0-a4ae-d9b4eae7d8be" name="Changes" comment="fix: Subject form layout design">
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/time.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_time.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/availability_form.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/availability_form.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/subject_form.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/subject_form.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/task_card.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/task_card.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/task_form.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/task_form.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\Jhon\.android\avd\Pixel_6_Pro_API_30.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[RF8R81LMJ9N]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -29,8 +38,8 @@
         <option value="valueResourceFile" />
         <option value="Class" />
         <option value="Kotlin Class" />
-        <option value="resourceFile" />
         <option value="layoutResourceFile" />
+        <option value="resourceFile" />
       </list>
     </option>
   </component>
@@ -50,7 +59,7 @@
     </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="develop" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -69,21 +78,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;android-custom-viewC:/Users/dandr/AndroidStudioProjects/UniTasker/app/src/main/java/com/example/unitasker/TaskCalendar.java_SELECTED&quot;: &quot;TaskCalendar&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;com.google.services.firebase.aqiPopupShown&quot;: &quot;true&quot;,
-    &quot;last_directory_selection&quot;: &quot;C:/Users/dandr/AndroidStudioProjects/UniTasker/app/src/main/res/drawable&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Jhon/Desktop/UniTask/UniTasker/app/src/main/res/drawable&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "android-custom-viewC:/Users/dandr/AndroidStudioProjects/UniTasker/app/src/main/java/com/example/unitasker/TaskCalendar.java_SELECTED": "TaskCalendar",
+    "android-custom-viewC:/Users/dandr/AndroidStudioProjects/UniTasker/app/src/main/java/com/example/unitasker/TaskCard.kt_SELECTED": "TaskCard",
+    "cidr.known.project.marker": "true",
+    "com.google.services.firebase.aqiPopupShown": "true",
+    "last_directory_selection": "C:/Users/dandr/AndroidStudioProjects/UniTasker/app/src/main/res/drawable",
+    "last_opened_file_path": "C:/Users/Jhon/Desktop/UniTask/UniTasker/app/src/main/res/drawable",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.17",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default"
   }
-}</component>
+}]]></component>
   <component name="PsdUISettings">
     <option name="MODULE_TAB" value="Default Config" />
     <option name="LAST_EDITED_SIGNING_CONFIG" value="debug" />
@@ -94,9 +105,13 @@
       <recent name="C:\Users\Jhon\Desktop\UniTask\UniTasker\app\src\main\res\drawable" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\dandr\AndroidStudioProjects\UniTasker\app\src\main\res\menu" />
       <recent name="C:\Users\Jhon\Desktop\UniTask\UniTasker\app\src\main\res\layout" />
       <recent name="C:\Users\dandr\AndroidStudioProjects\UniTasker\app\src\main\res\drawable" />
       <recent name="C:\Users\dandr\AndroidStudioProjects\UniTasker\app\src\main\res\font" />
+    </key>
+    <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="com.example.unitasker" />
     </key>
   </component>
   <component name="RunManager">
@@ -175,7 +190,49 @@
       <option name="project" value="LOCAL" />
       <updated>1680817675277</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feat: Added calendar view and task card component">
+      <created>1680844336494</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1680844336494</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat: Added navigation bar">
+      <created>1680910564497</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1680910564497</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat: Added subject form and availability view">
+      <created>1680911810599</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1680911810599</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat: Locked screen orientation">
+      <created>1680912012376</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1680912012376</updated>
+    </task>
+    <task id="LOCAL-00006" summary="fix: Calendar view showed when app is opened for the first time">
+      <created>1680912225475</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1680912225475</updated>
+    </task>
+    <task id="LOCAL-00007" summary="fix: Subject form layout design">
+      <created>1680913958248</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1680913958248</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -203,6 +260,12 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value="feat: Added calendar view and task card component" />
+    <MESSAGE value="feat: Added navigation bar" />
+    <MESSAGE value="feat: Added subject form and availability view" />
+    <MESSAGE value="feat: Locked screen orientation" />
+    <MESSAGE value="fix: Calendar view showed when app is opened for the first time" />
+    <MESSAGE value="fix: Subject form layout design" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: Subject form layout design" />
   </component>
 </project>
