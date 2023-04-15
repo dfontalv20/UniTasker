@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:backgroundTint="@color/purple">
@@ -18,7 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="New Task"
+            android:text="@string/new_task"
             android:layout_marginBottom="20dp" />
 
         <TextView
@@ -26,7 +25,7 @@
             style="@style/label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Task Name"
+            android:text="@string/task_name"
             android:layout_marginBottom="8dp" />
 
         <EditText
@@ -47,7 +46,7 @@
             style="@style/label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Subject"
+            android:text="@string/subject"
             android:layout_marginBottom="8dp" />
 
         <com.google.android.flexbox.FlexboxLayout
@@ -63,7 +62,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="24dp"
                 android:backgroundTint="@color/purple"
-                android:text="Web Development" />
+                android:text="@string/web_development" />
 
             <Button
                 android:id="@+id/button14"
@@ -71,7 +70,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="24dp"
                 android:backgroundTint="@color/orange"
-                android:text="Project Management" />
+                android:text="@string/project_management" />
 
             <Button
                 android:id="@+id/button15"
@@ -79,16 +78,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="24dp"
                 android:backgroundTint="@color/red"
-                android:text="Machine Learning" />
+                android:text="@string/machine_learning" />
         </com.google.android.flexbox.FlexboxLayout>
 
         <TextView
             android:id="@+id/textView12"
             style="@style/label"
-            android:layout_width="53dp"
+            android:layout_width="wrap_content"
             android:layout_height="17dp"
             android:layout_marginBottom="8dp"
-            android:text="Date" />
+            android:text="@string/date" />
 
         <EditText
             android:id="@+id/editTextTextPersonName5"
@@ -101,7 +100,7 @@
             android:ems="10"
             android:inputType="date"
             android:paddingStart="10dp"
-            android:paddingRight="10dp"
+            android:paddingEnd="10dp"
             android:textSize="12sp" />
 
         <TextView
@@ -109,7 +108,7 @@
             style="@style/label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hour"
+            android:text="@string/hour"
             android:layout_marginBottom="8dp" />
 
         <EditText
@@ -122,7 +121,7 @@
             android:ems="10"
             android:inputType="time"
             android:paddingStart="10dp"
-            android:paddingRight="10dp"
+            android:paddingEnd="10dp"
             android:textSize="12sp"
             app:drawableEndCompat="@drawable/ic_time"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -138,7 +137,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:buttonTint="@color/primary"
-            android:text="Assign automatically"
+            android:text="@string/assign_automatically"
             android:textColorLink="@color/primary"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.066"
@@ -151,7 +150,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
-            android:text="Duration" />
+            android:text="@string/duration_hours" />
 
         <EditText
             android:id="@+id/editTextTextPersonName2"
@@ -164,7 +163,7 @@
             android:ems="10"
             android:inputType="number"
             android:paddingStart="10dp"
-            android:paddingRight="10dp"
+            android:paddingEnd="10dp"
             android:textSize="12sp" />
 
         <TextView
@@ -173,7 +172,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
-            android:text="DeadLine" />
+            android:text="@string/deadline" />
 
         <EditText
             android:id="@+id/editTextTextPersonName4"
@@ -185,7 +184,7 @@
             android:ems="10"
             android:inputType="date"
             android:paddingStart="10dp"
-            android:paddingRight="10dp"
+            android:paddingEnd="10dp"
             android:textSize="12sp"
             app:drawableEndCompat="@drawable/ic_calendar" />
 
@@ -195,7 +194,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:buttonTint="@color/primary"
-            android:text="Allow notifications"
+            android:text="@string/allow_notifications"
             android:textColorLink="@color/primary"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.066"
@@ -207,7 +206,7 @@
             android:layout_width="match_parent"
             android:layout_height="42dp"
             android:layout_marginBottom="28dp"
-            android:text="Save"
+            android:text="@string/save"
             android:textAllCaps="false"
             android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:title="New Task" android:id="@+id/new_task" android:icon="@drawable/ic_add_circled_outline"/>
-    <item android:title="Calendar" android:id="@+id/calendar" android:icon="@drawable/ic_calendar"/>
-    <item android:title="Management" android:id="@+id/management" android:icon="@drawable/ic_settings"/>
+    <item android:title="@string/new_task" android:id="@+id/new_task" android:icon="@drawable/ic_add_circled_outline"/>
+    <item android:title="@string/calendar" android:id="@+id/calendar" android:icon="@drawable/ic_calendar"/>
+    <item android:title="@string/management" android:id="@+id/management" android:icon="@drawable/ic_settings"/>
 </menu>

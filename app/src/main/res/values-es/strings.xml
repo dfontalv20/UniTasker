@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">UniTasker</string>
+    <string name="monday">Lunes</string>
+    <string name="thursday">Jueves</string>
+    <string name="sunday">Domingo</string>
+    <string name="tuesday">Martes</string>
+    <string name="wednesday">Miercoles</string>
+    <string name="friday">Viernes</string>
+    <string name="save_schedule">Guardar Horario</string>
+    <string name="tasks">Tareas</string>
+    <string name="subjects">Asignaturas</string>
+    <string name="management">Configuracion</string>
+    <string name="new_task">Nueva Tarea</string>
+    <string name="calendar">Calendario</string>
+    <string name="new_subject">Nueva Asignatura</string>
+    <string name="subject_name">Nombre de la Asignatura</string>
+    <string name="subject_color">Color de Asignatura</string>
+    <string name="save">Guardar</string>
+    <string name="machine_learning_methods_research">Investigacion metodos de machine learning</string>
+    <string name="machine_learning">Machine learning</string>
+    <string name="availability">Disponibilidad</string>
+    <string name="task_name">Nombre de Tarea</string>
+    <string name="subject">Asignatura</string>
+    <string name="web_development">Desarrollo Web</string>
+    <string name="project_management">Gestión de Proyectos</string>
+    <string name="hour">Hora</string>
+    <string name="assign_automatically">Asignar automaticamente</string>
+    <string name="date">Fecha</string>
+    <string name="duration_hours">Duración (Horas)</string>
+    <string name="deadline">Fecha de entrega</string>
+    <string name="allow_notifications">Activar notificaciónes</string>
+</resources>

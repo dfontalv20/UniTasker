@@ -1,5 +1,32 @@
 <resources>
     <string name="app_name">UniTasker</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="availability">Availability</string>
+    <string name="monday">Monday</string>
+    <string name="thursday">Thursday</string>
+    <string name="sunday">Sunday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="friday">Friday</string>
+    <string name="save_schedule">Save Schedule</string>
+    <string name="tasks">Tasks</string>
+    <string name="subjects">Subjects</string>
+    <string name="management">Management</string>
+    <string name="new_task">New Task</string>
+    <string name="calendar">Calendar</string>
+    <string name="new_subject">New Subject</string>
+    <string name="subject_name">Subject Name</string>
+    <string name="subject_color">Subject Color</string>
+    <string name="save">Save</string>
+    <string name="machine_learning_methods_research">Machine learning methods research</string>
+    <string name="machine_learning">Machine learning</string>
+    <string name="task_name">Task Name</string>
+    <string name="subject">Subject</string>
+    <string name="web_development">Web Development</string>
+    <string name="project_management">Project Management</string>
+    <string name="date">Date (Hours)</string>
+    <string name="hour">Hour</string>
+    <string name="assign_automatically">Assign automatically</string>
+    <string name="duration_hours">Duration (Hours)</string>
+    <string name="deadline">DeadLine</string>
+    <string name="allow_notifications">Allow notifications</string>
 </resources>
