@@ -32,14 +32,14 @@
                         style="@style/heading"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Machine learning methods research" />
+                        android:text="@string/machine_learning_methods_research" />
 
                     <TextView
                         android:id="@+id/textView2"
                         style="@style/label"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Machine learning"
+                        android:text="@string/machine_learning"
                         android:textColor="#FE0A0A" />
 
                 </LinearLayout>
@@ -60,7 +60,7 @@
                     android:id="@+id/imageView"
                     android:layout_width="35dp"
                     android:layout_height="match_parent"
-                    android:layout_marginRight="4dp"
+                    android:layout_marginEnd="4dp"
                     android:layout_weight="1"
                     card_view:srcCompat="@drawable/ic_time"
                     card_view:tint="#FE0A0A" />

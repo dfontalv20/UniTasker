@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
         android:layout_marginBottom="4dp"
-        android:text="Tasks"
+        android:text="@string/tasks"
         android:textAppearance="@style/heading"
         app:layout_constraintBottom_toTopOf="@+id/scrollView2"
         app:layout_constraintStart_toStartOf="parent" />
