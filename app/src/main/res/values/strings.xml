@@ -23,7 +23,7 @@
     <string name="subject">Subject</string>
     <string name="web_development">Web Development</string>
     <string name="project_management">Project Management</string>
-    <string name="date">Date (Hours)</string>
+    <string name="date">Date</string>
     <string name="hour">Hour</string>
     <string name="assign_automatically">Assign automatically</string>
     <string name="duration_hours">Duration (Hours)</string>
