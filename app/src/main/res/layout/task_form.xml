@@ -5,6 +5,17 @@
     android:layout_height="match_parent"
     android:backgroundTint="@color/purple">
 
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="400dp"
+        android:layout_height="730dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.516">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -89,19 +100,13 @@
             android:layout_marginBottom="8dp"
             android:text="@string/date" />
 
-        <EditText
-            android:id="@+id/editTextTextPersonName5"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:layout_marginBottom="20dp"
-            android:background="@drawable/rounded_edittext_background"
+        <DatePicker
+            android:id="@+id/simpleDatePicker1"
+            android:layout_width="368dp"
+            android:layout_height="148dp"
             android:backgroundTint="@color/primary"
-            android:backgroundTintMode="add"
-            android:ems="10"
-            android:inputType="date"
-            android:paddingStart="10dp"
-            android:paddingEnd="10dp"
-            android:textSize="12sp" />
+            android:calendarViewShown="false"
+            android:datePickerMode="spinner" />
 
         <TextView
             android:id="@+id/textView11"
@@ -174,19 +179,13 @@
             android:layout_marginBottom="8dp"
             android:text="@string/deadline" />
 
-        <EditText
-            android:id="@+id/editTextTextPersonName4"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:background="@drawable/rounded_edittext_background"
+        <DatePicker
+            android:id="@+id/simpleDatePicker2"
+            android:layout_width="368dp"
+            android:layout_height="148dp"
             android:backgroundTint="@color/primary"
-            android:backgroundTintMode="add"
-            android:ems="10"
-            android:inputType="date"
-            android:paddingStart="10dp"
-            android:paddingEnd="10dp"
-            android:textSize="12sp"
-            app:drawableEndCompat="@drawable/ic_calendar" />
+            android:calendarViewShown="false"
+            android:datePickerMode="spinner" />
 
         <CheckBox
             android:id="@+id/radioButton2"
@@ -218,5 +217,6 @@
 
     </LinearLayout>
 
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
