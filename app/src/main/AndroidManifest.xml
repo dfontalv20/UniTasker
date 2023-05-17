@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <application
+        tools:replace="android:icon"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -10,7 +11,13 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.UniTasker"
+        android:name="com.orm.SugarApp"
+        android:enableOnBackInvokedCallback="true"
         tools:targetApi="31">
+        <meta-data android:name="DATABASE" android:value="unitasker.db" />
+        <meta-data android:name="VERSION" android:value="3" />
+        <meta-data android:name="QUERY_LOG" android:value="true" />
+        <meta-data android:name="DOMAIN_PACKAGE_NAME" android:value="com.example" />
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait"
