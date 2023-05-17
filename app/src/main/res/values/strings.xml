@@ -32,4 +32,14 @@
     <string name="current_subjects">Current Subjects</string>
     <string name="subject_created">Subject created</string>
     <string name="please_type_a_name">Please type a name</string>
+    <string name="delete_subject">Delete subject</string>
+    <string name="are_you_sure_you_wanna_delete_this_subject_all_tasks_assigned_to_this_subject_will_be_removed_too">Are you sure you wanna delete this subject? All tasks assigned to this subject will be removed too</string>
+    <string name="delete_task">Delete task</string>
+    <string name="are_you_sure_of_delete_this_task">Are you sure of delete this task?</string>
+    <string name="please_select_a_subject">Please select a subject</string>
+    <string name="please_type_task_name">Please type task name</string>
+    <string name="the_task_duration_is_invalid">The task duration is invalid</string>
+    <string name="task_created">Task created</string>
+    <string name="hours">Hours</string>
+    <string name="a_task_with_the_typed_name_already_exits">A task with the typed name already exits</string>
 </resources>

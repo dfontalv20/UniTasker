@@ -98,8 +98,8 @@ class NewSubjectFragment : Fragment(), OnDialogResultListener {
 
     private fun onDeleteSubject(subject: Subject) {
         val confirmDialog = AlertDialog.Builder(context)
-        confirmDialog.setTitle("Delete subject")
-        confirmDialog.setMessage("Are you sure you wanna delete this subject? All tasks assigned to this subject will be removed too")
+        confirmDialog.setTitle(resources.getString(R.string.delete_subject))
+        confirmDialog.setMessage(resources.getString(R.string.are_you_sure_you_wanna_delete_this_subject_all_tasks_assigned_to_this_subject_will_be_removed_too))
         confirmDialog.setPositiveButton(android.R.string.ok) { _, _ ->
             subject.delete()
             renderSubjects()

@@ -33,4 +33,14 @@
     <string name="current_subjects">Asignaturas actuales</string>
     <string name="subject_created">Asignatura creada</string>
     <string name="please_type_a_name">Porfavor ingrese un nombre</string>
+    <string name="delete_subject">Eliminar asignatura</string>
+    <string name="are_you_sure_you_wanna_delete_this_subject_all_tasks_assigned_to_this_subject_will_be_removed_too">¿Estas seguro de eliminar esta asignatura? Las tareas de esta tambien se eliminarán</string>
+    <string name="delete_task">Eliminar tarea</string>
+    <string name="are_you_sure_of_delete_this_task">¿Estas seguro que quieres eliminar esta tarea?</string>
+    <string name="please_select_a_subject">Debe seleccionar una asignatura</string>
+    <string name="please_type_task_name">Ingrese el nombre de la tarea</string>
+    <string name="the_task_duration_is_invalid">La duración de la tarea es invalida</string>
+    <string name="task_created">Tarea creada</string>
+    <string name="a_task_with_the_typed_name_already_exits">Ya existe una tarea con este nombre</string>
+    <string name="hours">Horas</string>
 </resources>

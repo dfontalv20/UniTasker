@@ -12,4 +12,10 @@ class Subject : SugarRecord<Subject> {
         this.name = name
         this.color = color.toArgb()
     }
+
+    override fun delete() {
+        val subjectTasks = find(Task::class.java, "subject = ?", this.id.toString())
+        subjectTasks.forEach{ task -> task.delete() }
+        super.delete()
+    }
 }

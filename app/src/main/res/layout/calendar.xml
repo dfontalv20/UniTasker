@@ -39,6 +39,7 @@
     </ScrollView>
 
     <CalendarView
+        android:id="@+id/home_calendar"
         android:theme="@style/Theme.TasksCalendar"
         android:weekDayTextAppearance="@style/Theme.UniTasker.TasksCalendar.WeekDayText"
         android:dateTextAppearance="@style/Theme.UniTasker.TasksCalendar.DateText"
