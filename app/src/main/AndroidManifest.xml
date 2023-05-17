@@ -12,6 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.UniTasker"
         android:name="com.orm.SugarApp"
+        android:enableOnBackInvokedCallback="true"
         tools:targetApi="31">
         <meta-data android:name="DATABASE" android:value="unitasker.db" />
         <meta-data android:name="VERSION" android:value="3" />

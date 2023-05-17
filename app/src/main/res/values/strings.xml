@@ -29,4 +29,7 @@
     <string name="duration_hours">Duration (Hours)</string>
     <string name="deadline">DeadLine</string>
     <string name="allow_notifications">Allow notifications</string>
+    <string name="current_subjects">Current Subjects</string>
+    <string name="subject_created">Subject created</string>
+    <string name="please_type_a_name">Please type a name</string>
 </resources>

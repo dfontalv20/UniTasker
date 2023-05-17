@@ -30,4 +30,7 @@
     <string name="duration_hours">Duración (Horas)</string>
     <string name="deadline">Fecha de entrega</string>
     <string name="allow_notifications">Activar notificaciónes</string>
+    <string name="current_subjects">Asignaturas actuales</string>
+    <string name="subject_created">Asignatura creada</string>
+    <string name="please_type_a_name">Porfavor ingrese un nombre</string>
 </resources>
