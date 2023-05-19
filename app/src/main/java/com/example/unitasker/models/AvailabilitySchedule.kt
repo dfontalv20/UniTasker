@@ -2,6 +2,7 @@ package com.example.unitasker.models
 
 import com.orm.SugarRecord
 import com.orm.dsl.Ignore
+import java.time.Duration
 import java.time.LocalDateTime
 import java.time.LocalTime
 import java.time.format.DateTimeFormatter
@@ -46,6 +47,23 @@ class AvailabilitySchedule : SugarRecord<AvailabilitySchedule> {
             return daySchedules.find { schedule ->
                 schedule.startTime.isBefore(date.toLocalTime()) && schedule.endTime.isAfter(date.toLocalTime())
             }
+        }
+
+        fun availableSchedule(startDate: LocalDateTime, limitDate: LocalDateTime, duration: Int): LocalDateTime? {
+            var currentDate = startDate
+            while (currentDate.isBefore(limitDate)) {
+                val schedule = findScheduleAt(currentDate)
+                if (schedule === null) {
+                    currentDate = currentDate.plusHours(duration.toLong())
+                    continue
+                }
+                val task = Task.findByAssignmentDate(currentDate)
+                if (task.isEmpty()) {
+                    return currentDate
+                }
+                currentDate = startDate.plusHours(duration.toLong())
+            }
+            return null
         }
     }
 }

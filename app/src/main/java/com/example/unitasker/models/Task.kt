@@ -54,6 +54,17 @@ class Task : SugarRecord<Task> {
             )
         }
 
+        fun findByAssignmentDate(date: LocalDateTime): List<Task> {
+            val tasks = findByAssignmentDate(date.toLocalDate())
+            return tasks.filter {task ->
+                if (task.assignmentStartDate == null || task.assignmentEndDate == null) {
+                    return@filter false
+                }
+                return@filter task.assignmentStartDate!!.isBefore(date) &&
+                        task.assignmentEndDate!!.isAfter(date)
+            }
+        }
+
         fun findByName(name: String): Task? {
             val tasks = find(
                 Task::class.java,

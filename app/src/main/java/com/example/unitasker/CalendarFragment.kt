@@ -65,7 +65,7 @@ class CalendarFragment : Fragment() {
                 context,
                 TaskCardAttributes(
                     task.title, taskSubject.name,
-                    "${getString(R.string.do_at)} ${task.assignmentStartDate?.format(timeFormatter)}-${task.assignmentEndDate?.format(timeFormatter)}", Color.valueOf(taskSubject.color)
+                    "${getString(R.string.do_at)} ${task.assignmentStartDate?.format(timeFormatter)} - ${task.assignmentEndDate?.format(timeFormatter)}", Color.valueOf(taskSubject.color)
                 )
             ) { onDeleteTask(task) }
         }

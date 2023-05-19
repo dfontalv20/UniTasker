@@ -18,6 +18,8 @@ import com.google.android.flexbox.FlexboxLayout
 import com.orm.SugarRecord
 import java.time.LocalDate
 import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
+import java.time.format.FormatStyle
 
 class NewTaskFragment : Fragment() {
 
@@ -94,7 +96,7 @@ class NewTaskFragment : Fragment() {
            return
        }
        if (checkBoxAssignAuto?.isChecked!!) {
-           val availableSchedule = AvailabilitySchedule.findScheduleAt(assignmentDate)
+           val availableSchedule = AvailabilitySchedule.availableSchedule(assignmentDate, deadLine.atTime(23, 59), duration)
            if (availableSchedule === null) {
                val confirmDialog = AlertDialog.Builder(context)
                confirmDialog.setTitle(getString(R.string.no_schedules_available))
@@ -104,6 +106,10 @@ class NewTaskFragment : Fragment() {
                confirmDialog.show()
                return
            }
+           assignmentDate = availableSchedule
+           persistTask()
+           Toast.makeText(context, "Task assigned at ${availableSchedule.format(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM ))}", Toast.LENGTH_LONG).show()
+           return
        } else {
            if (assignmentDate.isAfter(deadLine.atTime(23,59))) {
               Toast.makeText(context, getString(R.string.assignment_date_should_be_before_the_deadline), Toast.LENGTH_LONG).show()
