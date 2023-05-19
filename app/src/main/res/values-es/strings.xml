@@ -43,4 +43,5 @@
     <string name="task_created">Tarea creada</string>
     <string name="a_task_with_the_typed_name_already_exits">Ya existe una tarea con este nombre</string>
     <string name="hours">Horas</string>
+    <string name="saturday">Sabado</string>
 </resources>

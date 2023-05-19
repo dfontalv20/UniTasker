@@ -6,6 +6,7 @@
     <string name="sunday">Sunday</string>
     <string name="tuesday">Tuesday</string>
     <string name="wednesday">Wednesday</string>
+    <string name="saturday">Saturday</string>
     <string name="friday">Friday</string>
     <string name="save_schedule">Save Schedule</string>
     <string name="tasks">Tasks</string>
@@ -42,4 +43,5 @@
     <string name="task_created">Task created</string>
     <string name="hours">Hours</string>
     <string name="a_task_with_the_typed_name_already_exits">A task with the typed name already exits</string>
+    <string name="add_schedule">Add Schedule</string>
 </resources>
