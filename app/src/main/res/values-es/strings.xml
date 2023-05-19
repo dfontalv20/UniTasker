@@ -44,4 +44,7 @@
     <string name="a_task_with_the_typed_name_already_exits">Ya existe una tarea con este nombre</string>
     <string name="hours">Horas</string>
     <string name="saturday">Sabado</string>
+    <string name="add_schedule">Añadir Horario</string>
+    <string name="start_time_must_be_before_end_time">El tiempo de inicio debe ser despues al tiempo de fin</string>
+    <string name="schedule_deleted">Horario eliminado</string>
 </resources>

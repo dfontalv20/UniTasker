@@ -74,7 +74,7 @@ class AvailabilityFragment : Fragment(), OnDialogResultListener {
             val scheduleItem = AvailabilityItem(requireContext(), schedule.startTime, schedule.endTime)
             scheduleItem?.onDelete = {
                 schedule.delete()
-                Toast.makeText(context, "Schedule deleted", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, getString(R.string.schedule_deleted), Toast.LENGTH_SHORT).show()
                 loadSchedules()
             }
             scheduleItem?.onStartTimeClick = {
@@ -114,7 +114,7 @@ class AvailabilityFragment : Fragment(), OnDialogResultListener {
             (isEditingStartTime && newTime.isAfter(selectedSchedule?.endTime)) ||
             (!isEditingStartTime && newTime.isBefore(selectedSchedule?.startTime))
         ) {
-            Toast.makeText(requireContext(), "Start time must be before end time", Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(), getString(R.string.start_time_must_be_before_end_time), Toast.LENGTH_SHORT).show()
             selectedSchedule = null
             return true
         }

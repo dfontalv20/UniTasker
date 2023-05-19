@@ -44,4 +44,6 @@
     <string name="hours">Hours</string>
     <string name="a_task_with_the_typed_name_already_exits">A task with the typed name already exits</string>
     <string name="add_schedule">Add Schedule</string>
+    <string name="start_time_must_be_before_end_time">Start time must be before end time</string>
+    <string name="schedule_deleted">Schedule deleted</string>
 </resources>
