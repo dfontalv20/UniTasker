@@ -50,4 +50,6 @@
     <string name="no_schedules_available">Sin horarios disponibles</string>
     <string name="you_don_t_have_any_available_schedule_for_the_selected_assignment_date_do_you_want_to_create_the_task_anyway">No tienes horarios disponibles para la fecha de realizacion seleccionada, ¿Deseas crear la tarea de todas formas?</string>
     <string name="assignment_date_should_be_before_the_deadline">La fecha de realización debe estar antes de la fecha final</string>
+    <string name="final_day">DIA FINAL</string>
+    <string name="do_at">Realizar entre</string>
 </resources>

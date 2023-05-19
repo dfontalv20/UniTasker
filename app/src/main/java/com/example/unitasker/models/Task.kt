@@ -1,8 +1,10 @@
 package com.example.unitasker.models
 
 import com.orm.SugarRecord
+import com.orm.dsl.Ignore
 import java.time.LocalDate
 import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
 
 
 class Task : SugarRecord<Task> {
@@ -10,8 +12,20 @@ class Task : SugarRecord<Task> {
     var subject: Subject? = null
     var endDate: LocalDate? = null
     var duration: Int? = null
-    var assigmentStartDate: LocalDateTime? = null
-    var assigmentEndDate: LocalDateTime? = null
+    private var assignmentStartDateString: String? = null
+    private var assignmentEndDateString: String? = null
+    @field:Ignore var assignmentStartDate: LocalDateTime? = null
+        get() = LocalDateTime.parse(assignmentStartDateString, DateTimeFormatter.ISO_LOCAL_DATE_TIME)
+        set(value) {
+            field = value
+            assignmentStartDateString = value?.format(DateTimeFormatter.ISO_LOCAL_DATE_TIME)
+        }
+    @field:Ignore var assignmentEndDate: LocalDateTime? = null
+        get() = LocalDateTime.parse(assignmentEndDateString, DateTimeFormatter.ISO_LOCAL_DATE_TIME)
+        set(value) {
+            field = value
+            assignmentEndDateString = value?.format(DateTimeFormatter.ISO_LOCAL_DATE_TIME)
+        }
     var notificationEnabled: Boolean = false
 
     constructor()
@@ -24,10 +38,18 @@ class Task : SugarRecord<Task> {
     }
 
     companion object {
-        fun findByDate(date: LocalDate): List<Task> {
+        fun findByDeadLine(date: LocalDate): List<Task> {
             return find(
                 Task::class.java,
                 "end_date = ?",
+                date.toString()
+            )
+        }
+
+        fun findByAssignmentDate(date: LocalDate): List<Task> {
+            return find(
+                Task::class.java,
+                "DATE(assignment_start_date_string) = ?",
                 date.toString()
             )
         }

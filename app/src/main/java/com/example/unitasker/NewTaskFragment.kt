@@ -71,8 +71,8 @@ class NewTaskFragment : Fragment() {
        val allowNotification = checkBoxNotification!!.isChecked
         fun persistTask() {
             val newTask = Task(name, selectedSubject!!, deadLine, duration, allowNotification)
-            newTask.assigmentStartDate = assignmentDate
-            newTask.assigmentStartDate = assignmentDate.plusHours(duration.toLong())
+            newTask.assignmentStartDate = assignmentDate
+            newTask.assignmentEndDate = assignmentDate.plusHours(duration.toLong())
             newTask.save()
             Toast.makeText(context, getString(R.string.task_created), Toast.LENGTH_LONG).show()
             (activity as MainActivity).changeView(CalendarFragment())
