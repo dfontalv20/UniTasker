@@ -11,7 +11,7 @@
         android:layout_marginBottom="3dp"
         android:orientation="vertical"
         android:padding="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/button4"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -26,127 +26,30 @@
 
 
         <com.google.android.flexbox.FlexboxLayout
+            android:id="@+id/availability_days_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="32dp"
             android:paddingHorizontal="8dp"
             android:paddingVertical="4dp"
             app:flexWrap="wrap"
-            app:justifyContent="space_evenly">
-
-            <Button
-                style="@style/Theme.UniTasker.TextButton"
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:text="@string/monday"
-                android:textColor="@color/primary" />
-
-            <Button
-                style="@style/Theme.UniTasker.TextButton"
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:text="@string/thursday" />
-
-            <Button
-                style="@style/Theme.UniTasker.TextButton"
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:text="@string/sunday" />
-
-            <Button
-                style="@style/Theme.UniTasker.TextButton"
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:text="@string/tuesday" />
-
-            <Button
-                style="@style/Theme.UniTasker.TextButton"
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:text="@string/wednesday" />
-
-            <Button
-                style="@style/Theme.UniTasker.TextButton"
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:text="@string/friday" />
-        </com.google.android.flexbox.FlexboxLayout>
+            app:justifyContent="space_evenly" />
 
         <LinearLayout
+            android:id="@+id/availability_item_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:orientation="vertical">
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp">
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
-
-                    <TextView
-                        android:id="@+id/start_time"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:text="2:00 PM" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginHorizontal="24dp"
-                        android:gravity="center"
-                        android:text="-" />
-
-                    <TextView
-                        android:id="@+id/end_time"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:text="2:00 PM" />
-
-                </LinearLayout>
-
-                <ImageButton
-                    android:layout_width="16dp"
-                    android:layout_height="match_parent"
-                    android:background="@android:color/transparent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/ic_trash" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </LinearLayout>
+            android:orientation="vertical" />
 
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/availability_add_schedule_button"
             android:layout_width="match_parent"
             android:layout_height="42dp"
-            android:text="+"
+            android:text="@string/add_schedule"
             android:textAllCaps="false"
             android:textColor="@color/black" />
 
     </LinearLayout>
-
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="match_parent"
-        android:layout_height="42dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        android:text="@string/save_schedule"
-        android:textAllCaps="false"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

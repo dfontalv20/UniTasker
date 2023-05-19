@@ -1,26 +1,18 @@
 package com.example.unitasker
 
-import android.app.ActionBar.LayoutParams
 import android.app.AlertDialog
 import android.graphics.Color
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.CalendarView
 import android.widget.LinearLayout
-import android.widget.ScrollView
-import androidx.core.view.marginTop
-import androidx.core.view.setMargins
 import com.example.unitasker.models.Task
-import com.orm.SugarRecord
-import java.time.Instant
 import java.time.LocalDate
-import java.time.ZoneId
-import java.util.Calendar
-import java.util.GregorianCalendar
+import java.time.Month
+import java.time.format.DateTimeFormatter
 
 class CalendarFragment : Fragment() {
 
@@ -28,7 +20,7 @@ class CalendarFragment : Fragment() {
     private var tasksView: LinearLayout? = null
 
     private var yearSelected: Int = LocalDate.now().year
-    private var monthSelected: Int = LocalDate.now().monthValue - 1
+    private var monthSelected: Int = LocalDate.now().monthValue
     private var daySelected: Int = LocalDate.now().dayOfMonth
 
     override fun onCreateView(
@@ -41,7 +33,7 @@ class CalendarFragment : Fragment() {
         loadTasks()
         calendar?.setOnDateChangeListener { _, year, month, day ->
             yearSelected = year
-            monthSelected = month
+            monthSelected = month + 1
             daySelected = day
             loadTasks()
         }
@@ -50,21 +42,35 @@ class CalendarFragment : Fragment() {
 
     private fun loadTasks() {
         tasksView?.removeAllViews()
-        val tasks: List<Task> = Task.findByDate(LocalDate.of(yearSelected, monthSelected, daySelected))
+        val selectedDate = LocalDate.of(yearSelected, Month.of(monthSelected), daySelected)
+        val deadlineTasks: List<Task> = Task.findByDeadLine(selectedDate)
+        val assignmentTasks: List<Task> = Task.findByAssignmentDate(selectedDate)
         val context = this.context
         if (context === null || tasksView === null) {
             return
         }
-        val cards = tasks.map { task ->
+        val deadlineCards = deadlineTasks.map { task ->
             val taskSubject = task.subject!!
             return@map TaskCard(
                 context,
                 TaskCardAttributes(
-                    task.title, taskSubject.name, "${task.duration} ${getString(R.string.hours)}", Color.valueOf(taskSubject.color)
+                    task.title, taskSubject.name, getString(R.string.final_day), Color.valueOf(taskSubject.color)
                 )
             ) { onDeleteTask(task) }
         }
-        cards.forEach { task -> tasksView?.addView(task) }
+        val timeFormatter: DateTimeFormatter = DateTimeFormatter.ofPattern("h:mm a")
+        val assignmentCards = assignmentTasks.map { task ->
+            val taskSubject = task.subject!!
+            return@map TaskCard(
+                context,
+                TaskCardAttributes(
+                    task.title, taskSubject.name,
+                    "${getString(R.string.do_at)} ${task.assignmentStartDate?.format(timeFormatter)} - ${task.assignmentEndDate?.format(timeFormatter)}", Color.valueOf(taskSubject.color)
+                )
+            ) { onDeleteTask(task) }
+        }
+        assignmentCards.forEach { task -> tasksView?.addView(task) }
+        deadlineCards.forEach { task -> tasksView?.addView(task) }
     }
 
     private fun onDeleteTask(task: Task) {

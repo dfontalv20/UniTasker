@@ -1,6 +1,7 @@
 package com.example.unitasker
 
 import android.annotation.SuppressLint
+import android.app.AlertDialog
 import android.graphics.Color
 import android.os.Bundle
 import android.view.ContextThemeWrapper
@@ -10,12 +11,15 @@ import android.view.ViewGroup
 import android.widget.*
 import androidx.core.view.setMargins
 import androidx.fragment.app.Fragment
+import com.example.unitasker.models.AvailabilitySchedule
 import com.example.unitasker.models.Subject
 import com.example.unitasker.models.Task
 import com.google.android.flexbox.FlexboxLayout
 import com.orm.SugarRecord
 import java.time.LocalDate
-import java.util.GregorianCalendar
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
+import java.time.format.FormatStyle
 
 class NewTaskFragment : Fragment() {
 
@@ -52,13 +56,29 @@ class NewTaskFragment : Fragment() {
 
     private fun createTask() {
        val name = editTextTaskName?.text.toString()
-       val date = LocalDate.of(datePickerDeadline!!.year, datePickerDeadline!!.month, datePickerDeadline!!.dayOfMonth)
+       val deadLine = LocalDate.of(datePickerDeadline!!.year, datePickerDeadline!!.month + 1, datePickerDeadline!!.dayOfMonth)
+       var assignmentDate = LocalDateTime.of(
+           datePicker?.year!!,
+           datePicker?.month!! + 1,
+           datePicker?.dayOfMonth!!,
+           timePicker?.hour!!,
+           timePicker?.minute!!,
+           0
+       )
        val duration = try {
            Integer.parseInt(numberDuration!!.text.toString())
        } catch (e: NumberFormatException) {
            -1
        }
        val allowNotification = checkBoxNotification!!.isChecked
+        fun persistTask() {
+            val newTask = Task(name, selectedSubject!!, deadLine, duration, allowNotification)
+            newTask.assignmentStartDate = assignmentDate
+            newTask.assignmentEndDate = assignmentDate.plusHours(duration.toLong())
+            newTask.save()
+            Toast.makeText(context, getString(R.string.task_created), Toast.LENGTH_LONG).show()
+            (activity as MainActivity).changeView(CalendarFragment())
+        }
        if (name == "") {
            Toast.makeText(context, getString(R.string.please_type_task_name), Toast.LENGTH_LONG).show()
            return
@@ -75,10 +95,28 @@ class NewTaskFragment : Fragment() {
            Toast.makeText(context, getString(R.string.a_task_with_the_typed_name_already_exits), Toast.LENGTH_LONG).show()
            return
        }
-       val newTask = Task(name, selectedSubject!!, date, duration, allowNotification)
-       newTask.save()
-       Toast.makeText(context, getString(R.string.task_created), Toast.LENGTH_LONG).show()
-       (activity as MainActivity).changeView(CalendarFragment())
+       if (checkBoxAssignAuto?.isChecked!!) {
+           val availableSchedule = AvailabilitySchedule.availableSchedule(assignmentDate, deadLine.atTime(23, 59), duration)
+           if (availableSchedule === null) {
+               val confirmDialog = AlertDialog.Builder(context)
+               confirmDialog.setTitle(getString(R.string.no_schedules_available))
+               confirmDialog.setMessage(getString(R.string.you_don_t_have_any_available_schedule_for_the_selected_assignment_date_do_you_want_to_create_the_task_anyway))
+               confirmDialog.setPositiveButton(android.R.string.ok) { _, _ -> persistTask() }
+               confirmDialog.setNegativeButton(android.R.string.cancel, null)
+               confirmDialog.show()
+               return
+           }
+           assignmentDate = availableSchedule
+           persistTask()
+           Toast.makeText(context, "Task assigned at ${availableSchedule.format(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM ))}", Toast.LENGTH_LONG).show()
+           return
+       } else {
+           if (assignmentDate.isAfter(deadLine.atTime(23,59))) {
+              Toast.makeText(context, getString(R.string.assignment_date_should_be_before_the_deadline), Toast.LENGTH_LONG).show()
+               return
+           }
+       }
+        persistTask()
     }
 
     @SuppressLint("ResourceType")
