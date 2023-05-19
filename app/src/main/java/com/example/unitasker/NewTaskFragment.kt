@@ -54,7 +54,7 @@ class NewTaskFragment : Fragment() {
 
     private fun createTask() {
        val name = editTextTaskName?.text.toString()
-       val deadLine = LocalDate.of(datePickerDeadline!!.year, datePickerDeadline!!.month, datePickerDeadline!!.dayOfMonth)
+       val deadLine = LocalDate.of(datePickerDeadline!!.year, datePickerDeadline!!.month + 1, datePickerDeadline!!.dayOfMonth)
        var assignmentDate = LocalDateTime.of(
            datePicker?.year!!,
            datePicker?.month!! + 1,

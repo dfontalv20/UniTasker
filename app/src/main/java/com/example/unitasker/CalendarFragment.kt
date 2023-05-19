@@ -18,6 +18,7 @@ import com.example.unitasker.models.Task
 import com.orm.SugarRecord
 import java.time.Instant
 import java.time.LocalDate
+import java.time.Month
 import java.time.ZoneId
 import java.util.Calendar
 import java.util.GregorianCalendar
@@ -28,7 +29,7 @@ class CalendarFragment : Fragment() {
     private var tasksView: LinearLayout? = null
 
     private var yearSelected: Int = LocalDate.now().year
-    private var monthSelected: Int = LocalDate.now().monthValue - 1
+    private var monthSelected: Int = LocalDate.now().monthValue
     private var daySelected: Int = LocalDate.now().dayOfMonth
 
     override fun onCreateView(
@@ -41,7 +42,7 @@ class CalendarFragment : Fragment() {
         loadTasks()
         calendar?.setOnDateChangeListener { _, year, month, day ->
             yearSelected = year
-            monthSelected = month
+            monthSelected = month + 1
             daySelected = day
             loadTasks()
         }
@@ -50,7 +51,8 @@ class CalendarFragment : Fragment() {
 
     private fun loadTasks() {
         tasksView?.removeAllViews()
-        val tasks: List<Task> = Task.findByDate(LocalDate.of(yearSelected, monthSelected, daySelected))
+            val xd = Month.of(monthSelected)
+        val tasks: List<Task> = Task.findByDate(LocalDate.of(yearSelected, Month.of(monthSelected), daySelected))
         val context = this.context
         if (context === null || tasksView === null) {
             return
