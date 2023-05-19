@@ -108,7 +108,7 @@ class NewTaskFragment : Fragment() {
            }
            assignmentDate = availableSchedule
            persistTask()
-           Toast.makeText(context, "Task assigned at ${availableSchedule.format(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM ))}", Toast.LENGTH_LONG).show()
+           Toast.makeText(context, "${getString(R.string.task_assigned_at)} ${availableSchedule.format(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM ))}", Toast.LENGTH_LONG).show()
            return
        } else {
            if (assignmentDate.isAfter(deadLine.atTime(23,59))) {
