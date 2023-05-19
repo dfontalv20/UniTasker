@@ -24,8 +24,8 @@ class AvailabilityFragment : Fragment(), OnDialogResultListener {
     private var schedulesLayout: LinearLayout? = null
     private var daysLayout: FlexboxLayout? = null
     private val days = listOf(
-        R.string.monday, R.string.tuesday, R.string.wednesday,
-        R.string.thursday, R.string.friday, R.string.saturday, R.string.sunday
+        R.string.sunday, R.string.monday, R.string.tuesday, R.string.wednesday,
+        R.string.thursday, R.string.friday, R.string.saturday
     )
 
     private var selectedSchedule: AvailabilitySchedule? = null

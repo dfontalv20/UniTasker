@@ -46,4 +46,7 @@
     <string name="add_schedule">Add Schedule</string>
     <string name="start_time_must_be_before_end_time">Start time must be before end time</string>
     <string name="schedule_deleted">Schedule deleted</string>
+    <string name="no_schedules_available">No schedules available</string>
+    <string name="you_don_t_have_any_available_schedule_for_the_selected_assignment_date_do_you_want_to_create_the_task_anyway">You don\'t have any available schedule for the selected assignment date, do you want to create the task anyway?</string>
+    <string name="assignment_date_should_be_before_the_deadline">Assignment date should be before the deadline</string>
 </resources>

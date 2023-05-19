@@ -2,8 +2,6 @@ package com.example.unitasker.models
 
 import com.orm.SugarRecord
 import com.orm.dsl.Ignore
-import java.lang.Error
-import java.time.LocalDate
 import java.time.LocalDateTime
 import java.time.LocalTime
 import java.time.format.DateTimeFormatter
@@ -41,6 +39,13 @@ class AvailabilitySchedule : SugarRecord<AvailabilitySchedule> {
     companion object {
         fun findByDay(day: Int): List<AvailabilitySchedule> {
             return find(AvailabilitySchedule::class.java, "day = ?", day.toString())
+        }
+
+        fun findScheduleAt(date: LocalDateTime): AvailabilitySchedule? {
+            val daySchedules = findByDay( date.dayOfWeek.value)
+            return daySchedules.find { schedule ->
+                schedule.startTime.isBefore(date.toLocalTime()) && schedule.endTime.isAfter(date.toLocalTime())
+            }
         }
     }
 }

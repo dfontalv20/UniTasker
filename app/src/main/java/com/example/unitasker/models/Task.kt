@@ -2,7 +2,7 @@ package com.example.unitasker.models
 
 import com.orm.SugarRecord
 import java.time.LocalDate
-import java.util.*
+import java.time.LocalDateTime
 
 
 class Task : SugarRecord<Task> {
@@ -10,6 +10,8 @@ class Task : SugarRecord<Task> {
     var subject: Subject? = null
     var endDate: LocalDate? = null
     var duration: Int? = null
+    var assigmentStartDate: LocalDateTime? = null
+    var assigmentEndDate: LocalDateTime? = null
     var notificationEnabled: Boolean = false
 
     constructor()
