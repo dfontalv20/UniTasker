@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.app.AlertDialog
 import android.graphics.Color
 import android.os.Bundle
+import android.util.Log
 import android.view.ContextThemeWrapper
 import android.view.LayoutInflater
 import android.view.View
@@ -20,6 +21,8 @@ import java.time.LocalDate
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 import java.time.format.FormatStyle
+import java.util.*
+
 
 class NewTaskFragment : Fragment() {
 
@@ -49,7 +52,17 @@ class NewTaskFragment : Fragment() {
         checkBoxAssignAuto = view.findViewById(R.id.task_form_assign_auto)
         checkBoxNotification = view.findViewById(R.id.task_form_notification)
         buttonSave = view.findViewById(R.id.task_form_button_save)
-        buttonSave?.setOnClickListener { createTask() }
+        buttonSave?.setOnClickListener {
+            createTask()
+            Log.d("TAREA CREADA CON EXITO", "FLAG")
+            val alarmReceiver = AlarmReceiver()
+            alarmReceiver.notification(context)
+            alarmReceiver.createScheduledTask(context, datePicker?.year!!,
+                datePicker?.month!! + 1,
+                datePicker?.dayOfMonth!!,
+                timePicker?.hour!!,
+                timePicker?.minute!!,)
+        }
         renderSubjects()
         return view
     }
@@ -108,7 +121,7 @@ class NewTaskFragment : Fragment() {
            }
            assignmentDate = availableSchedule
            persistTask()
-           Toast.makeText(context, "${getString(R.string.task_assigned_at)} ${availableSchedule.format(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM ))}", Toast.LENGTH_LONG).show()
+           Toast.makeText(context, " ${availableSchedule.format(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM ))}", Toast.LENGTH_LONG).show()
            return
        } else {
            if (assignmentDate.isAfter(deadLine.atTime(23,59))) {
