@@ -32,10 +32,8 @@ class NewTaskFragment : Fragment() {
     private var datePicker: DatePicker? = null
     private var timePicker: TimePicker? = null
     private var datePickerDeadline: DatePicker? = null
-    private var checkBoxNotification: CheckBox? = null
     private var checkBoxAssignAuto: CheckBox? = null
     private var buttonSave: Button? = null
-
     private var selectedSubject: Subject? = null
 
     override fun onCreateView(
@@ -50,7 +48,7 @@ class NewTaskFragment : Fragment() {
         timePicker = view.findViewById(R.id.task_form_time)
         datePickerDeadline = view.findViewById(R.id.task_form_deadline)
         checkBoxAssignAuto = view.findViewById(R.id.task_form_assign_auto)
-        checkBoxNotification = view.findViewById(R.id.task_form_notification)
+
         buttonSave = view.findViewById(R.id.task_form_button_save)
         buttonSave?.setOnClickListener {
             createTask()
@@ -83,9 +81,9 @@ class NewTaskFragment : Fragment() {
        } catch (e: NumberFormatException) {
            -1
        }
-       val allowNotification = checkBoxNotification!!.isChecked
+
         fun persistTask() {
-            val newTask = Task(name, selectedSubject!!, deadLine, duration, allowNotification)
+            val newTask = Task(name, selectedSubject!!, deadLine, duration, true)
             newTask.assignmentStartDate = assignmentDate
             newTask.assignmentEndDate = assignmentDate.plusHours(duration.toLong())
             newTask.save()

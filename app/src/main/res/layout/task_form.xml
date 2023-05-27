@@ -154,19 +154,6 @@
                 android:calendarViewShown="false"
                 android:datePickerMode="spinner" />
 
-            <CheckBox
-                android:id="@+id/task_form_notification"
-                style="@style/label"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:buttonTint="@color/primary"
-                android:text="@string/allow_notifications"
-                android:textColorLink="@color/primary"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.066"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName4" />
-
             <Button
                 android:id="@+id/task_form_button_save"
                 android:layout_width="match_parent"
